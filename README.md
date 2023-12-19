@@ -1,2 +1,2 @@
 # fastAD
-a extention to brwosers that speeds up youtube ads
+a extention to browser that speeds up youtube ads
