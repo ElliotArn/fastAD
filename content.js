@@ -1,5 +1,5 @@
 function checkad() {
-        let ad=false;
+        let ad=true;
         try {
                ad=document.querySelector("div.ad-showing"); 
         } catch (error) {
@@ -7,7 +7,7 @@ function checkad() {
         }
         if (ad) {
         //Ad is active as a video 
-        document.getElementsByTagName("video")[0].playbackRate = 100;
+        document.getElementsByTagName("video")[0].playbackRate = 16;
         try {
                 document.querySelector('.ytp-skip-ad-button').click();
         } catch (error) {
