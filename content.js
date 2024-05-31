@@ -8,9 +8,8 @@ function checkad() {
         if (ad) {
         //Ad is active as a video 
         document.getElementsByTagName("video")[0].playbackRate = 100;
-        //document.querySelector('.ytp-ad-skip-button').click();
         try {
-                document.querySelector('.ytp-ad-skip-button').click();
+                document.querySelector('.ytp-skip-ad-button').click();
         } catch (error) {
                 
         }
