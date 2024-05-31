@@ -1,7 +1,8 @@
 function checkad() {
-        let ad=true;
+        let ad=false;
         try {
                ad=document.querySelector("div.ad-showing"); 
+                ad= true;
         } catch (error) {
                 ad=false;
         }
