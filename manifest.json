@@ -1,23 +1,19 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "fastAD",
-  "version": "1.1",
+  "version": "1.2",
+  "description": "Speeds up YouTube ads so you don't have to watch them",
 
-  "description": "speeds up youtube ads so you dont have to watch them",
-
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "fastAD@test.com"
-    }
-  },
-  
   "content_scripts": [
     {
       "matches": ["*://*.youtube.com/watch?*"],
       "js": ["content.js"]
     }
   ],
+
   "permissions": [
-    "*://*.youtube.com/watch?*"
+    "tabs",
+    "scripting",
+    "activeTab"
   ]
 }
