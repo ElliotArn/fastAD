@@ -1,19 +1,21 @@
+let count = 80;
 function checkad() {
-        let ad=false;
-        try {
-               ad=document.querySelector("div.ad-showing"); 
-                ad= true;
-        } catch (error) {
-                ad=false;
-        }
-        if (ad) {
-        //Ad is active as a video 
-        document.getElementsByTagName("video")[0].playbackRate = 16;
-        try {
-                document.querySelector('.ytp-skip-ad-button').click();
-        } catch (error) {
+	count++
+	if(count>100){
+		console.log("it is working")
+		count = 0;
+	}
+	
+	if(document.querySelector("div.ad-showing")!=null){
+		console.log("ad is showing");
+		document.getElementsByTagName("video")[0].playbackRate = 16;
+		document.getElementsByTagName("video")[0].muted=true
+        	try {
+                	document.querySelector('.ytp-skip-ad-button').click();
+        	} catch (error) {
                 
-        }
-     } 
+        	}
+	}
+
 }
 setInterval(checkad, 100);
